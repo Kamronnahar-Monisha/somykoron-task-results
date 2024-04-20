@@ -7,8 +7,8 @@ import os
 load_dotenv() 
 
 app = Flask(__name__)
-redis_client = redis.Redis(host=os.getenv("REDIS_HOST"), port=os.getenv("REDIS_PORT"))
-#redis_client = redis.Redis(host='localhost', port=6379)
+redis_client = redis.Redis(host=os.getenv("REDIS_HOST"), port=os.getenv("REDIS_PORT"),db=1)
+#redis_client = redis.Redis(host='localhost', port=6379,db=1)
 
 
 
@@ -28,4 +28,4 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
