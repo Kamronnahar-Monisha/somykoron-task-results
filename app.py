@@ -23,6 +23,7 @@ def home():
             decentralized_data = json.loads(result_data.decode('utf-8'))
             print(decentralized_data)
             result_list.append(decentralized_data)
+    print("what a day ..................",result_list)        
     return jsonify(result_list)
 
 
