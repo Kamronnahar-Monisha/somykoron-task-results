@@ -22,11 +22,10 @@ def home():
             # deserialized the json string data 
             decentralized_data = json.loads(result_data.decode('utf-8'))
             print(decentralized_data)
-            result_list.append(decentralized_data)
-    print("what a day ..................",result_list)        
+            result_list.append(decentralized_data)        
     return jsonify(result_list)
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True,port='8002')
+    app.run()
